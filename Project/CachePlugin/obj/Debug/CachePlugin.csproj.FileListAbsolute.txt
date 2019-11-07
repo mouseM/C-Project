@@ -11,3 +11,12 @@ D:\gitLib\learningMouse\C#\Project\Project\bin\Debug\Bundles\CachePlugin\Manifes
 D:\gitLib\learningMouse\C#\Project\Project\bin\Debug\Bundles\CachePlugin\log4net.config
 D:\gitLib\learningMouse\C#\Project\Project\bin\Debug\Bundles\CachePlugin\CachePlugin.dll
 D:\gitLib\learningMouse\C#\Project\Project\bin\Debug\Bundles\CachePlugin\CachePlugin.pdb
+D:\gitLib\C-Project\Project\Project\bin\Debug\Bundles\CachePlugin\Manifest.xml
+D:\gitLib\C-Project\Project\Project\bin\Debug\Bundles\CachePlugin\log4net.config
+D:\gitLib\C-Project\Project\Project\bin\Debug\Bundles\CachePlugin\CachePlugin.dll
+D:\gitLib\C-Project\Project\Project\bin\Debug\Bundles\CachePlugin\CachePlugin.pdb
+D:\gitLib\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.csprojResolveAssemblyReference.cache
+D:\gitLib\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.csproj.CoreCompileInputs.cache
+D:\gitLib\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.csproj.CopyComplete
+D:\gitLib\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.dll
+D:\gitLib\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.pdb
