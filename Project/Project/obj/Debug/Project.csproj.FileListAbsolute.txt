@@ -24,6 +24,7 @@ D:\gitLib\learningMouse\C#\Project\Project\bin\Debug\LogPlugin.pdb
 D:\gitLib\learningMouse\C#\Project\Project\obj\Debug\Project.Form1.resources
 D:\gitLib\C-Project\Project\Project\bin\Debug\Manifest.xml
 D:\gitLib\C-Project\Project\Project\bin\Debug\log4net.config
+D:\gitLib\C-Project\Project\Project\bin\Debug\OSGi.NET.properties
 D:\gitLib\C-Project\Project\Project\bin\Debug\Project.exe.config
 D:\gitLib\C-Project\Project\Project\bin\Debug\Project.exe
 D:\gitLib\C-Project\Project\Project\bin\Debug\Project.pdb
@@ -40,6 +41,7 @@ D:\gitLib\C-Project\Project\Project\bin\Debug\OSGi.NET.xml
 D:\gitLib\C-Project\Project\Project\bin\Debug\log4net.xml
 D:\gitLib\C-Project\Project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
 D:\gitLib\C-Project\Project\Project\obj\Debug\Project.Form1.resources
+D:\gitLib\C-Project\Project\Project\obj\Debug\Project.PluginDetailForm.resources
 D:\gitLib\C-Project\Project\Project\obj\Debug\Project.Properties.Resources.resources
 D:\gitLib\C-Project\Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
 D:\gitLib\C-Project\Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache

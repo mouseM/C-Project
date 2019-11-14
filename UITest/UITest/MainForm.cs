@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UITest
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -27,9 +27,19 @@ namespace UITest
 
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+
+        BundleDetialsForm bundleDetialsForm;
+        private void stateToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Plugin2");
+            bundleDetialsForm = new BundleDetialsForm();
+            bundleDetialsForm.Text = "New Name";
+            bundleDetialsForm.Show();
+            
+        }
+
+        private void stateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Show();
         }
     }
 }

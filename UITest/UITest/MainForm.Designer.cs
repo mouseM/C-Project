@@ -1,6 +1,6 @@
 ﻿namespace UITest
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -31,17 +31,11 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.stateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.stateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.plugin3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.状态ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.activateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.activateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.stateToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.activateToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.stopToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,31 +63,38 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stateToolStripMenuItem1,
-            this.activateToolStripMenuItem2,
-            this.stopToolStripMenuItem2});
+            this.stateToolStripMenuItem1});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem2.Text = "plugin1";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // stateToolStripMenuItem1
+            // 
+            this.stateToolStripMenuItem1.Name = "stateToolStripMenuItem1";
+            this.stateToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.stateToolStripMenuItem1.Text = "state";
+            this.stateToolStripMenuItem1.Click += new System.EventHandler(this.stateToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stateToolStripMenuItem,
-            this.activateToolStripMenuItem1,
-            this.stopToolStripMenuItem1});
+            this.stateToolStripMenuItem});
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem3.Text = "plugin2";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
+            // stateToolStripMenuItem
+            // 
+            this.stateToolStripMenuItem.Name = "stateToolStripMenuItem";
+            this.stateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stateToolStripMenuItem.Text = "state";
+            this.stateToolStripMenuItem.Click += new System.EventHandler(this.stateToolStripMenuItem_Click);
+            // 
             // plugin3ToolStripMenuItem
             // 
             this.plugin3ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.状态ToolStripMenuItem,
-            this.activateToolStripMenuItem,
-            this.stopToolStripMenuItem});
+            this.状态ToolStripMenuItem});
             this.plugin3ToolStripMenuItem.Enabled = false;
             this.plugin3ToolStripMenuItem.Name = "plugin3ToolStripMenuItem";
             this.plugin3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
@@ -102,56 +103,8 @@
             // 状态ToolStripMenuItem
             // 
             this.状态ToolStripMenuItem.Name = "状态ToolStripMenuItem";
-            this.状态ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.状态ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.状态ToolStripMenuItem.Text = "状态";
-            // 
-            // activateToolStripMenuItem
-            // 
-            this.activateToolStripMenuItem.Name = "activateToolStripMenuItem";
-            this.activateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.activateToolStripMenuItem.Text = "activate";
-            // 
-            // stopToolStripMenuItem
-            // 
-            this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.stopToolStripMenuItem.Text = "stop";
-            // 
-            // stateToolStripMenuItem
-            // 
-            this.stateToolStripMenuItem.Name = "stateToolStripMenuItem";
-            this.stateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.stateToolStripMenuItem.Text = "state";
-            // 
-            // activateToolStripMenuItem1
-            // 
-            this.activateToolStripMenuItem1.Name = "activateToolStripMenuItem1";
-            this.activateToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.activateToolStripMenuItem1.Text = "activate";
-            // 
-            // stopToolStripMenuItem1
-            // 
-            this.stopToolStripMenuItem1.Name = "stopToolStripMenuItem1";
-            this.stopToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.stopToolStripMenuItem1.Text = "stop";
-            // 
-            // stateToolStripMenuItem1
-            // 
-            this.stateToolStripMenuItem1.Name = "stateToolStripMenuItem1";
-            this.stateToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.stateToolStripMenuItem1.Text = "state";
-            // 
-            // activateToolStripMenuItem2
-            // 
-            this.activateToolStripMenuItem2.Name = "activateToolStripMenuItem2";
-            this.activateToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.activateToolStripMenuItem2.Text = "activate";
-            // 
-            // stopToolStripMenuItem2
-            // 
-            this.stopToolStripMenuItem2.Name = "stopToolStripMenuItem2";
-            this.stopToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.stopToolStripMenuItem2.Text = "stop";
             // 
             // Form1
             // 
@@ -176,15 +129,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem stateToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem activateToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem stopToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem stateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem activateToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem stopToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem plugin3ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 状态ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem activateToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem stopToolStripMenuItem;
     }
 }
 
