@@ -8,6 +8,6 @@ namespace EventHandlePlugin
 {
     public interface IListener
     {
-        void notify();
+        void notify(Event e);
     }
 }

@@ -37,12 +37,23 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Project\Lib\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="ModelPlugin">
+      <HintPath>..\Project\Lib\ModelPlugin.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>..\..\..\..\..\mihCode\OSGIDemo\OSGIDemo\bin\Debug\Libs\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Project\Lib\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="OSGi.NET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Project\Lib\OSGi.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlSugar, Version=5.0.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Project\Lib\SqlSugar.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DBEvent.cs" />
     <Compile Include="DBServices.cs" />
     <Compile Include="IDBServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,10 +77,18 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EventHandlePlugin\EventHandlePlugin.csproj">
+      <Project>{36c17ec8-0291-4379-93d6-d1c41f2ae2d9}</Project>
+      <Name>EventHandlePlugin</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogPlugin\LogPlugin.csproj">
       <Project>{c3a081f3-4314-4d2d-9513-d6599c6b6c25}</Project>
       <Name>LogPlugin</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

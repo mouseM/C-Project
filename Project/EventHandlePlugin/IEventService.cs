@@ -8,8 +8,12 @@ namespace EventHandlePlugin
 {
     public interface IEventService
     {
-        void registEvent(Event e);
+        // 订阅服务
+        void registListener(IListener listener);
 
-        void removeEvent(Event e);
+        // 删除订阅者
+        void removeListener(IListener listener);
+
+        void postEvent(Event e);
     }
 }

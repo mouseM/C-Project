@@ -31,6 +31,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CachePlugin">
+      <HintPath>bin\Debug\Bundles\CachePlugin\CachePlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="DBPlugin">
+      <HintPath>bin\Debug\Bundles\DBPlugin\DBPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="ModelPlugin">
+      <HintPath>Lib\ModelPlugin.dll</HintPath>
+    </Reference>
     <Reference Include="OSGi.NET, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Lib\OSGi.NET.dll</HintPath>
@@ -48,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BundleTools.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +76,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\Tools.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -78,6 +98,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="OSGi.NET.properties">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -101,17 +124,17 @@
     <Content Include="Lib\OSGi.NET.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CachePlugin\CachePlugin.csproj">
-      <Project>{5cfabac6-5375-498d-831c-a12cb9411ff3}</Project>
-      <Name>CachePlugin</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DBPlugin\DBPlugin.csproj">
-      <Project>{27257a25-d3b1-4a77-ad32-a81d92c9aa15}</Project>
-      <Name>DBPlugin</Name>
+    <ProjectReference Include="..\EventHandlePlugin\EventHandlePlugin.csproj">
+      <Project>{36c17ec8-0291-4379-93d6-d1c41f2ae2d9}</Project>
+      <Name>EventHandlePlugin</Name>
     </ProjectReference>
     <ProjectReference Include="..\LogPlugin\LogPlugin.csproj">
       <Project>{c3a081f3-4314-4d2d-9513-d6599c6b6c25}</Project>
       <Name>LogPlugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestPlugin\TestPlugin.csproj">
+      <Project>{959fbb3f-d784-4d75-94fd-c2a64bdcc424}</Project>
+      <Name>TestPlugin</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

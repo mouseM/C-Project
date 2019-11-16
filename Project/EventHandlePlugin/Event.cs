@@ -8,6 +8,6 @@ namespace EventHandlePlugin
 {
     public abstract class Event
     {
-        protected abstract void Handle();
+        public abstract EventMessage getMessage();
     }
 }

@@ -13,6 +13,7 @@ D:\gitLib\learningMouse\C#\Project\DBPlugin\obj\Debug\DBPlugin.dll
 D:\gitLib\learningMouse\C#\Project\DBPlugin\obj\Debug\DBPlugin.pdb
 D:\gitLib\C-Project\Project\Project\bin\Debug\Bundles\DBPlugin\Manifest.xml
 D:\gitLib\C-Project\Project\Project\bin\Debug\Bundles\DBPlugin\log4net.config
+D:\gitLib\C-Project\Project\Project\bin\Debug\Bundles\DBPlugin\DBPlugin.dll.config
 D:\gitLib\C-Project\Project\Project\bin\Debug\Bundles\DBPlugin\DBPlugin.dll
 D:\gitLib\C-Project\Project\Project\bin\Debug\Bundles\DBPlugin\DBPlugin.pdb
 D:\gitLib\C-Project\Project\DBPlugin\obj\Debug\DBPlugin.csprojResolveAssemblyReference.cache

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ModelPlugin;
 
 namespace DBPlugin
 {
@@ -11,9 +11,7 @@ namespace DBPlugin
     {
         void initDBServices();
 
-        void initDBServices(SqlConnection sqlConnection);
-
-        bool createOperation(string sqlCommond);
+        bool createOperation(Model model);
 
         bool deleteOperation(string sqlCommond);
 

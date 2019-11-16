@@ -8,16 +8,27 @@ namespace EventHandlePlugin
 {
     class EventService : IEventService
     {
-        List<Event> registedEventList = new List<Event>();
+        List<IListener> listeners = new List<IListener>();
 
-        public void registEvent(Event e)
+        // 分发事件给相应订阅者
+        public void postEvent(Event e)
         {
-            registedEventList.Add(e);
+            foreach(IListener listener in listeners)
+            {
+                listener.notify(e);
+            }
         }
 
-        public void removeEvent(Event e)
+        public void registListener(IListener listener)
         {
-            registedEventList.Remove(e);
+            listeners.Add(listener);
         }
+
+        public void removeListener(IListener listener)
+        {
+            listeners.Remove(listener);
+        }
+
+
     }
 }
