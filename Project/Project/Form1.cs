@@ -24,9 +24,7 @@ namespace Project
         private Dictionary<string, IBundle> bundleNameMap = new Dictionary<string, IBundle>();
 
         IFramework framework;
-
-        // 
-        private IDBServices dBServices;
+        private static IDBServices dBServices = null;
 
         private void initBundleMap(IList<IBundle> bundles)
         {
@@ -52,10 +50,7 @@ namespace Project
         // 获取服务实例
         private void initServices(IFramework framework)
         {
-            BundleTools bundleTools = new BundleTools(framework);
-
-            dBServices = bundleTools.DBservice;
-
+            dBServices = framework.GetBundleContext().GetService<IDBServices>();
         }
 
         public Form1()
@@ -127,7 +122,7 @@ namespace Project
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            testForm = new TestForm(dBServices);
+            testForm = new TestForm();
 
             testForm.Show();
         }

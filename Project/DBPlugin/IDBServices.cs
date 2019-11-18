@@ -7,6 +7,7 @@ using ModelPlugin;
 
 namespace DBPlugin
 {
+    
     public interface IDBServices
     {
         void initDBServices();

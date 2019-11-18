@@ -19,3 +19,4 @@ D:\gitLib\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.csproj.CoreCompileInpu
 D:\gitLib\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.csproj.CopyComplete
 D:\gitLib\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.dll
 D:\gitLib\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.pdb
+D:\gitLib\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.csprojResolveAssemblyReference.cache

@@ -76,6 +76,7 @@ namespace DBPlugin
             // checkDataBase();
 
             //serviceRegistration = context.RegisterService<>
+            AppDomain currentDomain = AppDomain.CurrentDomain;
             log.Debug("DBPlugin Started!");
         }
 

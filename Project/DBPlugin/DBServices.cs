@@ -12,8 +12,8 @@ using ModelPlugin;
 
 namespace DBPlugin
 {
-
-    class DBServices: IDBServices, IPublisher
+    [Serializable]
+    public class DBServices: IDBServices, IPublisher
     {
         private ILogService logService;
         private IEventService eventService;
