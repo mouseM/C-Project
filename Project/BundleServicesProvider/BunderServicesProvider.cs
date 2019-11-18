@@ -12,15 +12,15 @@ namespace BundleServicesProvider
 {
     public class BunderServicesProvider
     {
-        //public static IBundleContext Context { set; get; }
+        public static IBundleContext Context { set; get; }
 
-        //public static IDBServices DBServices { set; get; }
+        public static IDBServices DBServices { set; get; }
 
-        //public static ILogService LogService { set; get; }
+        public static ILogService LogService { set; get; }
 
-        //public static IEventService EventService { set; get; }
+        public static IEventService EventService { set; get; }
 
-        //public static string TestString { set; get; }
+        public static string TestString { set; get; }
 
         private IDBServices dBServices;
         private ILogService logService;

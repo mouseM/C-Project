@@ -20,3 +20,11 @@ D:\gitLib\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.csproj.CopyComplete
 D:\gitLib\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.dll
 D:\gitLib\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.pdb
 D:\gitLib\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.csprojResolveAssemblyReference.cache
+E:\mihCode\C-Project\Project\Project\bin\Debug\Bundles\LogPlugin\Manifest.xml
+E:\mihCode\C-Project\Project\Project\bin\Debug\Bundles\LogPlugin\log4net.config
+E:\mihCode\C-Project\Project\Project\bin\Debug\Bundles\LogPlugin\LogPlugin.dll
+E:\mihCode\C-Project\Project\Project\bin\Debug\Bundles\LogPlugin\LogPlugin.pdb
+E:\mihCode\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.csprojAssemblyReference.cache
+E:\mihCode\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.csproj.CopyComplete
+E:\mihCode\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.dll
+E:\mihCode\C-Project\Project\LogPlugin\obj\Debug\LogPlugin.pdb

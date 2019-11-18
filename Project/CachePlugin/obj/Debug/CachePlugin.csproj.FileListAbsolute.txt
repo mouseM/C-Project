@@ -20,3 +20,11 @@ D:\gitLib\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.csproj.CoreCompile
 D:\gitLib\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.csproj.CopyComplete
 D:\gitLib\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.dll
 D:\gitLib\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.pdb
+E:\mihCode\C-Project\Project\Project\bin\Debug\Bundles\CachePlugin\Manifest.xml
+E:\mihCode\C-Project\Project\Project\bin\Debug\Bundles\CachePlugin\log4net.config
+E:\mihCode\C-Project\Project\Project\bin\Debug\Bundles\CachePlugin\CachePlugin.dll
+E:\mihCode\C-Project\Project\Project\bin\Debug\Bundles\CachePlugin\CachePlugin.pdb
+E:\mihCode\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.csprojAssemblyReference.cache
+E:\mihCode\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.csproj.CopyComplete
+E:\mihCode\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.dll
+E:\mihCode\C-Project\Project\CachePlugin\obj\Debug\CachePlugin.pdb

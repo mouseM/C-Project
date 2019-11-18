@@ -19,9 +19,9 @@ namespace Project
         private IDBServices dBServices;
         public TestForm()
         {
-            //dBServices = BunderServicesProvider.DBServices as DBServices;
+            dBServices = (DBServices)BunderServicesProvider.DBServices;
             BunderServicesProvider instance = BunderServicesProvider.getInstance();
-            dBServices = instance.getDBServices();
+            //dBServices = instance.getDBServices();
             InitializeComponent();
         }
 

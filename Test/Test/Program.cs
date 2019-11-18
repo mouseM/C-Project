@@ -15,7 +15,7 @@ namespace Test
         public static Person person;
         public static void LoadAssemblyTest()
         {
-            var dllFile = Assembly.LoadFile(@"D:\gitLib\C-Project\Test\Test\bin\Debug\Library2.dll");
+            var dllFile = Assembly.LoadFile(@"E:\mihCode\C-Project\Test\Test\bin\Debug\Libs\Library2.dll");
             var personType = dllFile.GetType(@"Library2.Person");
             Person personInstance = (Person)dllFile.CreateInstance(@"Library2.Person");
             personType.GetProperty("Name").SetValue(personInstance, "mihao", null);

@@ -33,9 +33,11 @@
   <ItemGroup>
     <Reference Include="CachePlugin">
       <HintPath>bin\Debug\Bundles\CachePlugin\CachePlugin.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="DBPlugin">
       <HintPath>bin\Debug\Bundles\DBPlugin\DBPlugin.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -126,18 +128,22 @@
     <ProjectReference Include="..\BundleServicesProvider\BundleServicesProvider.csproj">
       <Project>{31522d29-bede-4150-9341-0910059ad1d7}</Project>
       <Name>BundleServicesProvider</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\EventHandlePlugin\EventHandlePlugin.csproj">
       <Project>{36c17ec8-0291-4379-93d6-d1c41f2ae2d9}</Project>
       <Name>EventHandlePlugin</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\LogPlugin\LogPlugin.csproj">
       <Project>{c3a081f3-4314-4d2d-9513-d6599c6b6c25}</Project>
       <Name>LogPlugin</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\TestPlugin\TestPlugin.csproj">
       <Project>{959fbb3f-d784-4d75-94fd-c2a64bdcc424}</Project>
       <Name>TestPlugin</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

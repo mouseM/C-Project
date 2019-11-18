@@ -24,9 +24,9 @@ namespace BundleServicesProvider
             logService = context.GetService<ILogService>();
             eventService = context.GetService<IEventService>();
             //BunderServicesProvider.Context = context;
-            //BunderServicesProvider.DBServices = dBServices;
-            //BunderServicesProvider.LogService = logService;
-            //BunderServicesProvider.EventService = eventService;
+            BunderServicesProvider.DBServices = dBServices;
+            BunderServicesProvider.LogService = logService;
+            BunderServicesProvider.EventService = eventService;
             //BunderServicesProvider.TestString = "mihao";
             BunderServicesProvider instance = BunderServicesProvider.getInstance();
             instance.setDBServices(dBServices);
