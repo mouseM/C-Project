@@ -55,28 +55,36 @@
     <ProjectReference Include="..\CachePlugin\CachePlugin.csproj">
       <Project>{5cfabac6-5375-498d-831c-a12cb9411ff3}</Project>
       <Name>CachePlugin</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\DBPlugin\DBPlugin.csproj">
       <Project>{27257a25-d3b1-4a77-ad32-a81d92c9aa15}</Project>
       <Name>DBPlugin</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\EventHandlePlugin\EventHandlePlugin.csproj">
       <Project>{36c17ec8-0291-4379-93d6-d1c41f2ae2d9}</Project>
       <Name>EventHandlePlugin</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\LogPlugin\LogPlugin.csproj">
       <Project>{c3a081f3-4314-4d2d-9513-d6599c6b6c25}</Project>
       <Name>LogPlugin</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\TestPlugin\TestPlugin.csproj">
       <Project>{959fbb3f-d784-4d75-94fd-c2a64bdcc424}</Project>
       <Name>TestPlugin</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Manifest.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

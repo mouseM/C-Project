@@ -19,15 +19,15 @@ namespace Project
         private IDBServices dBServices;
         public TestForm()
         {
+            string fullName1 = typeof(IDBServices).Assembly.FullName;
+            string fulllName2 = typeof(BunderServicesProvider).Assembly.FullName;
             dBServices = (DBServices)BunderServicesProvider.DBServices;
             BunderServicesProvider instance = BunderServicesProvider.getInstance();
-            //dBServices = instance.getDBServices();
             InitializeComponent();
         }
 
         public TestForm(IDBServices dBServices)
         {
-            //this.dBServices = dBServices;
             InitializeComponent();
         }
 
@@ -38,9 +38,15 @@ namespace Project
             Person person = new Person();
             person.name = name;
             person.Age = int.Parse(age);
-            AppDomain currentDomain = AppDomain.CurrentDomain;
-
-            dBServices.createOperation(person);
+            bool result = dBServices.createOperation(person);
+            if (result == true)
+            {
+                MessageBox.Show("创建成功", "创建结果");
+            }
+            else
+            {
+                MessageBox.Show("创建失败", "创建结果");
+            }
         }
     }
 }

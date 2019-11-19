@@ -70,6 +70,7 @@
             this.uninstallRadioButton.TabStop = true;
             this.uninstallRadioButton.Text = "卸载";
             this.uninstallRadioButton.UseVisualStyleBackColor = true;
+            this.uninstallRadioButton.CheckedChanged += new System.EventHandler(this.uninstallRadioButton_CheckedChanged);
             // 
             // installRadioButton
             // 
@@ -81,6 +82,7 @@
             this.installRadioButton.TabStop = true;
             this.installRadioButton.Text = "安装";
             this.installRadioButton.UseVisualStyleBackColor = true;
+            this.installRadioButton.CheckedChanged += new System.EventHandler(this.installRadioButton_CheckedChanged);
             // 
             // stopRadioButton
             // 
@@ -92,6 +94,7 @@
             this.stopRadioButton.TabStop = true;
             this.stopRadioButton.Text = "停止";
             this.stopRadioButton.UseVisualStyleBackColor = true;
+            this.stopRadioButton.CheckedChanged += new System.EventHandler(this.stopRadioButton_CheckedChanged);
             // 
             // activeRadioButton
             // 
@@ -103,6 +106,7 @@
             this.activeRadioButton.TabStop = true;
             this.activeRadioButton.Text = "激活";
             this.activeRadioButton.UseVisualStyleBackColor = true;
+            this.activeRadioButton.CheckedChanged += new System.EventHandler(this.activeRadioButton_CheckedChanged);
             // 
             // stateDetialLabel
             // 

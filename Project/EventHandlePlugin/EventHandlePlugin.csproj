@@ -64,6 +64,7 @@
     <ProjectReference Include="..\LogPlugin\LogPlugin.csproj">
       <Project>{c3a081f3-4314-4d2d-9513-d6599c6b6c25}</Project>
       <Name>LogPlugin</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

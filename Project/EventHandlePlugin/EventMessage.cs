@@ -21,5 +21,6 @@ namespace EventHandlePlugin
             }
         }
 
+        private object MessageDetial { get; set; }
     }
 }

@@ -90,7 +90,7 @@ namespace Project
             IBundle bundle = Tools.Tools.getBundleByName(bundleName, bundles);
             int bundleState = bundle.GetState();
             string bundleStateString = Tools.Tools.transState(bundleState);
-            pluginDetailForm = new PluginDetailForm(bundleName, bundleStateString);
+            pluginDetailForm = new PluginDetailForm(framework, bundleName, bundleStateString);
             pluginDetailForm.Text = text;
             pluginDetailForm.Show();
         }

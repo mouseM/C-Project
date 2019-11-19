@@ -47,5 +47,10 @@ namespace UITest
         {
             Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("提交成功", "提交结果");
+        }
     }
 }

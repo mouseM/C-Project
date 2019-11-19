@@ -20,7 +20,8 @@ namespace BundleServicesProvider
         private ILog log;
         public void Start(IBundleContext context)
         {
-            dBServices = context.GetService<IDBServices>();
+            string fullName = typeof(IDBServices).Assembly.FullName;
+            dBServices = (DBServices)context.GetService<IDBServices>();
             logService = context.GetService<ILogService>();
             eventService = context.GetService<IEventService>();
             //BunderServicesProvider.Context = context;

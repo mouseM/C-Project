@@ -18,6 +18,7 @@ namespace EventHandlePlugin
         private ILog log;
         public void Start(IBundleContext context)
         {
+            string fullName = typeof(ILogService).Assembly.FullName;
             var logServiceReference = context.GetServiceReference<ILogService>();
             logService = context.GetService<ILogService>(logServiceReference);
 

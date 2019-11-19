@@ -24,13 +24,14 @@ namespace DBPlugin
 
         public DBServices()
         {
-            log = logService.GetLogger(typeof(DBServices));
+            
         }
 
         public DBServices(ILogService logService, IEventService eventService)
         {
             this.logService = logService;
             this.eventService = eventService;
+            log = logService.GetLogger(typeof(DBServices));
             initDBServices();
         }
 
@@ -39,11 +40,13 @@ namespace DBPlugin
             try
             {
                 // 数据库添加一条数据， 并告诉相关订阅者；
-                db.Insertable(model).ExecuteCommand();
+                Person person = model as Person;
+                db.Insertable(person).ExecuteCommand();
                 post();
             }
-            catch
+            catch(Exception e)
             {
+                log.Error(e);
                 return false;
             }
             return true;
@@ -100,7 +103,6 @@ namespace DBPlugin
             {
 
                 EventMessage eventMessage = new EventMessage();
-
                 return eventMessage;
             }
         }

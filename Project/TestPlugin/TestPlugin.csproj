@@ -36,6 +36,9 @@
     <Reference Include="log4net">
       <HintPath>..\Project\Lib\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="ModelPlugin">
+      <HintPath>..\Project\Lib\ModelPlugin.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>..\Project\Lib\Mono.Cecil.dll</HintPath>
     </Reference>
@@ -62,13 +65,20 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DBPlugin\DBPlugin.csproj">
+      <Project>{27257a25-d3b1-4a77-ad32-a81d92c9aa15}</Project>
+      <Name>DBPlugin</Name>
+      <Private>False</Private>
+    </ProjectReference>
     <ProjectReference Include="..\EventHandlePlugin\EventHandlePlugin.csproj">
       <Project>{36c17ec8-0291-4379-93d6-d1c41f2ae2d9}</Project>
       <Name>EventHandlePlugin</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\LogPlugin\LogPlugin.csproj">
       <Project>{c3a081f3-4314-4d2d-9513-d6599c6b6c25}</Project>
       <Name>LogPlugin</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
