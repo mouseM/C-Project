@@ -5,26 +5,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LogPlugin;
-using log4net;
-
+using NLog;
 namespace CachePlugin
 {
     public class Class1 : IBundleActivator
     {
         private ILogService logService;
-
+        private ILogger logger;
         public void Start(IBundleContext context)
         {
+            
             var serviceReference = context.GetServiceReference<ILogService>();
-            var logService = context.GetService<ILogService>(serviceReference);
-            ILog log = logService.GetLogger(typeof(Class1));
-            log.Debug("CachePlugin Started!");
+            logService = context.GetService<ILogService>(serviceReference);
+            logger = logService.GetLogger();
+            logger.Debug("CachePlugin Started!");
         }
 
         public void Stop(IBundleContext context)
         {
-            ILog log = logService.GetLogger(typeof(Class1));
-            log.Debug("CachePlugin Stopped!");
+
+            logger.Debug("CachePlugin Stopped!");
         }
     }
 }

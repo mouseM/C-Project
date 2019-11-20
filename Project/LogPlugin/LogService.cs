@@ -1,15 +1,20 @@
-﻿using log4net;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NLog;
 
 namespace LogPlugin
 {
     class LogService : ILogService
     {
-        ILog log;
+        private Logger logger;
+
+        public LogService()
+        {
+            this.logger = LogManager.GetCurrentClassLogger();
+        }
 
         public void Debug(string debugMessage)
         {
@@ -21,10 +26,9 @@ namespace LogPlugin
             
         }
 
-        public ILog GetLogger(Type type)
+        public Logger GetLogger()
         {
-
-            return LogManager.GetLogger(type);            
+            return LogManager.GetCurrentClassLogger();         
         }
 
         public void Info(string infoMessage)

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using EventHandlePlugin;
 using LogPlugin;
 using DBPlugin;
+using NLog;
 
 namespace TestPlugin
 {
@@ -15,6 +16,7 @@ namespace TestPlugin
         private IEventService eventService;
         private ILogService logService;
         private IDBServices dBServices;
+        private ILogger logger;
 
         public void Start(IBundleContext context)
         {
@@ -26,12 +28,14 @@ namespace TestPlugin
 
             var logServiceReference = context.GetServiceReference<ILogService>();
             logService = context.GetService<ILogService>(logServiceReference);
+            logger = logService.GetLogger();
             ListenerTest listener = new ListenerTest(eventService, logService, dBServices);
+            logger.Debug("TestPlugin Started!");
         }
 
         public void Stop(IBundleContext context)
         {
-            
+            logger.Debug("TestPlugin Stopped!");
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using EventHandlePlugin;
-using log4net;
 using LogPlugin;
 using SqlSugar;
 using System;
@@ -9,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ModelPlugin;
+using NLog;
 
 namespace DBPlugin
 {
@@ -20,7 +20,7 @@ namespace DBPlugin
         private static string SqlServerConnString = @"Data Source=127.0.0.1,1433;database=MihTest;uid=sa;pwd=123";
         private SqlSugarClient db;
 
-        private ILog log;
+        private ILogger logger;
 
         public DBServices()
         {
@@ -31,7 +31,7 @@ namespace DBPlugin
         {
             this.logService = logService;
             this.eventService = eventService;
-            log = logService.GetLogger(typeof(DBServices));
+            logger = logService.GetLogger();
             initDBServices();
         }
 
@@ -46,7 +46,7 @@ namespace DBPlugin
             }
             catch(Exception e)
             {
-                log.Error(e);
+                logger.Error(e);
                 return false;
             }
             return true;

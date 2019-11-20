@@ -9,7 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using LogPlugin;
+using BundleServicesProvider;
+using NLog;
 namespace Project
 {
     public partial class PluginDetailForm : Form
@@ -18,7 +20,8 @@ namespace Project
         private string bundleState = null;
         private IBundle bundle;
         private IFramework framework;
-
+        private ILogService logService;
+        private ILogger logger;
         public PluginDetailForm()
         {
             InitializeComponent();
@@ -30,6 +33,8 @@ namespace Project
             this.bundleState = bundleState;
             bundle = framework.GetBundleContext().GetBundle(bundleName);
             this.framework = framework;
+            logService = BunderServicesProvider.LogService;
+            logger = logService.GetLogger();
             InitializeComponent();
             stateDetialLabel.Text = bundleState;
             
@@ -41,31 +46,29 @@ namespace Project
 
         private void activeRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            //string radioButtonSenderText = ((RadioButton)sender).Text;
-            //IBundle bundle = framework.GetBundleContext().GetBundle(bundleName);
-            //if (radioButtonSenderText.Equals("激活"))
-            //{
-            //    bundle.Start();
-            //}
-            //if (radioButtonSenderText.Equals("停止"))
-            //{
-            //    bundle.Stop();
-            //}
-            //if (radioButtonSenderText.Equals("卸载"))
-            //{
-
-            //}
-            //if (radioButtonSenderText.Equals("安装"))
-            //{
-
-            //}
-            bundle.Start();
+            try
+            {
+                bundle.Start();
+            }
+            catch(Exception ex)
+            {
+                logger.Error(ex);
+            }
+            
                 
         }
 
         private void stopRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            bundle.Stop();
+            try
+            {
+                bundle.Stop();
+            }
+            catch(Exception ex)
+            {
+                logger.Error(ex);
+            }
+            
         }
 
         private void installRadioButton_CheckedChanged(object sender, EventArgs e)

@@ -1,4 +1,4 @@
-﻿using log4net;
+﻿using NLog;
 using LogPlugin;
 using OSGi.NET.Core;
 using OSGi.NET.Service;
@@ -15,24 +15,24 @@ namespace EventHandlePlugin
 
         private IServiceRegistration serviceRegistration;
         private ILogService logService;
-        private ILog log;
+        private ILogger logger;
         public void Start(IBundleContext context)
         {
             string fullName = typeof(ILogService).Assembly.FullName;
             var logServiceReference = context.GetServiceReference<ILogService>();
             logService = context.GetService<ILogService>(logServiceReference);
 
-            log = logService.GetLogger(typeof(Class1));
+            logger = logService.GetLogger();
 
             // 注册服务
             serviceRegistration = context.RegisterService<IEventService>(new EventService());
 
-            log.Info("EventHandlePlugin Started!");
+            logger.Info("EventHandlePlugin Started!");
         }
 
         public void Stop(IBundleContext context)
         {
-            log.Info("EventHandlePlugin Stopped!");
+            logger.Info("EventHandlePlugin Stopped!");
         }
     }
 }

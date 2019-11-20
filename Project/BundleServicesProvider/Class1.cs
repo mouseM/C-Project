@@ -1,5 +1,4 @@
-﻿using OSGi.NET.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,17 +6,18 @@ using System.Threading.Tasks;
 using DBPlugin;
 using LogPlugin;
 using EventHandlePlugin;
-using log4net;
 using System.Threading;
+using NLog;
+using OSGi.NET.Core;
 
 namespace BundleServicesProvider
 {
-    public class Class1 : IBundleActivator
+    public class Class1: IBundleActivator
     {
         private IDBServices dBServices;
         private ILogService logService;
         private IEventService eventService;
-        private ILog log;
+        private ILogger logger;
         public void Start(IBundleContext context)
         {
             string fullName = typeof(IDBServices).Assembly.FullName;
@@ -33,9 +33,9 @@ namespace BundleServicesProvider
             instance.setDBServices(dBServices);
             instance.setEventService(eventService);
             instance.setLogServiecs(logService);
-            log = logService.GetLogger(typeof(Class1));
-          
-            log.Info("BundleServicesProvider Started!");
+            logger = logService.GetLogger();
+
+            logger.Info("BundleServicesProvider Started!");
 
 
         }
@@ -44,7 +44,7 @@ namespace BundleServicesProvider
 
         public void Stop(IBundleContext context)
         {
-            log.Info("BundleServicesProvider Stopped!");
+            logger.Info("BundleServicesProvider Stopped!");
         }
     }
 }

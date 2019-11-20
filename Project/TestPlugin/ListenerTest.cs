@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EventHandlePlugin;
-using log4net;
 using LogPlugin;
 using DBPlugin;
 using ModelPlugin;
-
+using NLog;
 namespace TestPlugin
 {
     class ListenerTest : IListener
@@ -16,14 +15,14 @@ namespace TestPlugin
         private IEventService eventService;
         private ILogService logService;
         private IDBServices dBServices;
-        private ILog log;
+        private ILogger logger;
 
         public ListenerTest(IEventService eventService, ILogService logService, IDBServices dBServices)
         {
             this.eventService = eventService;
             this.logService = logService;
             this.dBServices = dBServices;
-            log = logService.GetLogger(typeof(ListenerTest));
+            logger = logService.GetLogger();
             eventService.registListener(this);
         }
 
@@ -31,17 +30,14 @@ namespace TestPlugin
         {
             EventMessage message = e.getMessage();
 
-            Person person = new Person();
-            person.Age = 66;
-            person.name = "接受到事件";
-            dBServices.createOperation(person);
+            
             if (message != null)
             {
-                log.Info("recieve message!");
+                logger.Info("recieve message!");
             }
             else
             {
-                log.Info("unable to recieve message!");
+                logger.Info("unable to recieve message!");
             }
         }
     }

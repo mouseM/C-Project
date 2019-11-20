@@ -1,4 +1,4 @@
-﻿using log4net;
+﻿using NLog;
 using LogPlugin;
 using OSGi.NET.Core;
 using OSGi.NET.Service;
@@ -17,47 +17,7 @@ namespace DBPlugin
         private IServiceRegistration serviceRegistration;
         private ILogService logService;
         private IEventService eventService;
-        private ILog log;
-
-        //private static string SqlServerConnString = @"Data Source=127.0.0.1,1433;database=MihTest;uid=sa;pwd=123";
-        //private static string WindowsServerConnString = @"Data Source=DESKTOP-RKK5DDE\SQLEXPRESS;Initial Catalog=MihTest;Integrated Security=TRUE";
-        //private void checkDataBase()
-        //{
-        //    try
-        //    {
-        //        using (SqlConnection sqlConn = new SqlConnection(SqlServerConnString))
-        //        {
-        //            sqlConn.Open();
-        //            // 构建查询语句
-        //            string selectSql = "select * from Person";
-        //            SqlCommand command = new SqlCommand();
-        //            command.CommandType = System.Data.CommandType.Text;
-        //            command.CommandText = selectSql;
-
-        //            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(command);
-        //            sqlDataAdapter.SelectCommand.Connection = sqlConn;
-
-        //            DataTable dataTable = new DataTable();
-        //            sqlDataAdapter.Fill(dataTable);
-
-        //            foreach (DataRow dataRow in dataTable.Rows)
-        //            {
-        //                string name = Convert.ToString(dataRow["name"]);
-        //                log.Info("name: " + name);
-        //                int age = Convert.ToInt32(dataRow["age"]);
-        //                log.Info("age: " + age);
-
-
-        //            }
-
-        //            sqlConn.Close();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        log.Error(ex);
-        //    }
-        //}
+        private ILogger logger;        
 
         public void Start(IBundleContext context)
         {
@@ -68,22 +28,17 @@ namespace DBPlugin
             var eventServiceReference = context.GetServiceReference<IEventService>();
             eventService = context.GetService<IEventService>(eventServiceReference);
 
-            log = logService.GetLogger(typeof(Class1));
+            logger = logService.GetLogger();
 
             // 注册服务
             serviceRegistration = context.RegisterService<IDBServices>(new DBServices(logService, eventService));
 
-            // checkDataBase();
-
-            //serviceRegistration = context.RegisterService<>
-            AppDomain currentDomain = AppDomain.CurrentDomain;
-            log.Debug("DBPlugin Started!");
+            logger.Debug("DBPlugin Started!");
         }
 
         public void Stop(IBundleContext context)
-        {
-            ILog log = logService.GetLogger(typeof(Class1));
-            log.Debug("DBPlugin Stopped!");
+        {           
+            logger.Debug("DBPlugin Stopped!");
         }
     }
 }
