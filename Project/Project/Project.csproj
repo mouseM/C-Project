@@ -123,12 +123,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Lib\ICSharpCode.SharpZipLib.dll" />
-    <Content Include="Lib\log4net.dll" />
-    <Content Include="Lib\Mono.Cecil.dll" />
-    <Content Include="Lib\OSGi.NET.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BundleServicesProvider\BundleServicesProvider.csproj">
       <Project>{31522d29-bede-4150-9341-0910059ad1d7}</Project>
       <Name>BundleServicesProvider</Name>
@@ -149,6 +143,12 @@
       <Name>TestPlugin</Name>
       <Private>False</Private>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Libs\ModelPlugin.dll" />
+    <Content Include="Libs\Newtonsoft.Json.dll" />
+    <Content Include="Libs\NLog.dll" />
+    <Content Include="Libs\SqlSugar.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
