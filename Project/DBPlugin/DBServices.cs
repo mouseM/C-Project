@@ -21,7 +21,8 @@ namespace DBPlugin
         private SqlSugarClient db;
 
         private ILogger logger;
-
+        // 数据库是否连接
+        private bool connected = true;
         public DBServices()
         {
             
@@ -32,11 +33,20 @@ namespace DBPlugin
             this.logService = logService;
             this.eventService = eventService;
             logger = logService.GetLogger();
-            initDBServices();
+            if (!initDBServices())
+            {
+                logger.Warn("数据库连接失败！");
+                connected = false;
+            }
+            
         }
 
         public bool createOperation(Model model)
         {
+            if (connected == false)
+            {
+                return false;
+            }
             try
             {
                 // 数据库添加一条数据， 并告诉相关订阅者；
@@ -78,23 +88,32 @@ namespace DBPlugin
             return null;
         }
 
-        public void initDBServices()
+        public bool initDBServices()
         {
-            db = new SqlSugarClient(new ConnectionConfig()
+            try
             {
-                ConnectionString = SqlServerConnString,
-                DbType = DbType.SqlServer,
-                IsAutoCloseConnection = true,
-                InitKeyType = InitKeyType.Attribute
-            }
+                db = new SqlSugarClient(new ConnectionConfig()
+                {
+                    ConnectionString = SqlServerConnString,
+                    DbType = DbType.SqlServer,
+                    IsAutoCloseConnection = true,
+                    InitKeyType = InitKeyType.Attribute
+                }
             );
 
-            db.Aop.OnLogExecuting = (sql, pars) =>
+                db.Aop.OnLogExecuting = (sql, pars) =>
+                {
+                    Console.WriteLine(sql + "\r\n" +
+                    db.Utilities.SerializeObject(pars.ToDictionary(it => it.ParameterName, it => it.Value)));
+                    Console.WriteLine();
+                };
+            }
+            catch
             {
-                Console.WriteLine(sql + "\r\n" +
-                db.Utilities.SerializeObject(pars.ToDictionary(it => it.ParameterName, it => it.Value)));
-                Console.WriteLine();
-            };
+                return false;
+            }
+
+            return true;
         }
 
         private EventMessage GetEventMessage

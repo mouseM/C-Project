@@ -10,7 +10,7 @@ namespace DBPlugin
     
     public interface IDBServices
     {
-        void initDBServices();
+        bool initDBServices();
 
         bool createOperation(Model model);
 
