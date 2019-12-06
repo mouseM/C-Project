@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29424.173
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{D7F63255-0A41-4A0F-A548-18ED1BE0D432}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library2", "Library2\Library2.csproj", "{D8D69663-7D5E-441B-AA9A-B4B92C1B40EE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLogTest", "NLogTest\NLogTest.csproj", "{57622906-90DB-4AEE-B05F-EBED48BAEA77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonOperationTest", "JsonOperationTest\JsonOperationTest.csproj", "{B90DDB58-46B8-42D5-87AE-F39C775417C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{57622906-90DB-4AEE-B05F-EBED48BAEA77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57622906-90DB-4AEE-B05F-EBED48BAEA77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57622906-90DB-4AEE-B05F-EBED48BAEA77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B90DDB58-46B8-42D5-87AE-F39C775417C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B90DDB58-46B8-42D5-87AE-F39C775417C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B90DDB58-46B8-42D5-87AE-F39C775417C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B90DDB58-46B8-42D5-87AE-F39C775417C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
